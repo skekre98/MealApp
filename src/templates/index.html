@@ -24,20 +24,6 @@
         </p>
 
         <p>
-            <label for="target weight">Target Weight:</label>
-            <input type="mass" name="target weight" id="target weight" placeholder="lbs." required>
-        </p>
-
-        <p>
-            <label for="strategy">Strategy:</label>
-            <input type="text" name="strategy" list="strategy" placeholder="weight development" required>
-            <datalist id="strategy">
-                <option value="Mild">
-                <option value="Aggressive">
-            </datalist>
-        </p>
-
-        <p>
             <label for="gender">Gender:</label>
             <input type="text" name="gender" list="genders">
             <datalist id="genders">
@@ -45,6 +31,22 @@
                 <option value="Female">
             </datalist>
         </p>
+
+        <p>
+            <label for="progress">Weight Progress:</label>
+            <input type="text" name="progress" list="progress" placeholder="per week">
+            <datalist id="progress">
+                <option value="+2.0lbs">
+                <option value="+1.5lbs">
+                <option value="+1.0lbs">
+                <option value="+0.5lbs">
+                <option value="-0.5lbs">
+                <option value="-1.0lbs">
+                <option value="-1.5lbs">
+                <option value="-2.0lbs">
+            </datalist>
+        </p>
+
 
         <p>
             <button type="submit">
