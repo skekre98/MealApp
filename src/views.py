@@ -14,4 +14,4 @@ def query(request):
     # querystring = {"q":"How much vitamin c is in 2 apples%3F"}
     # response = requests.request("GET", url, headers=headers, params=querystring)
     # print(response.text)
-    return render(request, 'index.html')
+    return render(request, 'register.html')
