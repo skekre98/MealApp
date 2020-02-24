@@ -6,6 +6,8 @@ body {
     text-align: center;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
+    background-image: url('{% static 'images/WelcomePagePicDELETETHIS.jpg' %}'); 
+    background-size: 100% auto
   }
   
   #contact-form {
