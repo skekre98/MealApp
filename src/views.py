@@ -17,4 +17,4 @@ def ingest(request):
             # connect to sqlite
             # insert user info
             print('hi')
-    return render(request, 'register.html')
+    return render(request, 'login.html')
