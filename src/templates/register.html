@@ -5,16 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel='stylesheet' type='text/css'>
     <link href="{% static 'css/main.css' %}" rel='stylesheet' type='text/css'>
     <link href="{% static 'css/bar.css' %}" rel='stylesheet' type='text/css'>
-    <style>
-        div 
-        {
-            background-image: url('{% static 'images/kitchen.jpg' %}') no-repeat center center fixed; 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-    </style>
+
 
 </head>
 <body>
@@ -28,9 +19,7 @@
         </a>
     </div>
 
-    <div style="background-image: url('{% static 'images/kitchen.jpg' %}')">
-
-    <form action="/create-profile/"  method="POST" id="register-form">
+    <form action="."  method="POST" id="register-form">
         {% csrf_token %}
         <p>
             <input type="text" name="register-name" id="name" minlength="3" placeholder="Name" required>
