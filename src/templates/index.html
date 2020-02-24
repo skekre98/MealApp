@@ -4,9 +4,18 @@
     <title>Meal App</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel='stylesheet' type='text/css'>
     <link href="{% static 'css/main.css' %}" rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/bar.css' %}" rel='stylesheet' type='text/css'>
 </head>
 <body>
     {% block content %}
+
+    <div class="topnav" id="myTopnav">
+        <a href="#register" class="active">Register</a>
+        <a href="#about">About Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
     <form id="contact-form">
         <p>
@@ -47,6 +56,17 @@
             </datalist>
         </p>
 
+        <p>
+            <label for="physical">Activity Level:</label>
+            <input type="text" name="physical" list="physical">
+            <datalist id="physical">
+                <option value="Sedentary">
+                <option value="Light">
+                <option value="Moderate">
+                <option value="Very Active">
+            </datalist>
+        </p>
+
 
         <p>
             <button type="submit">
@@ -54,7 +74,7 @@
                 <path d="M100,0L100,0 M23.8,7.1L100,0L40.9,36l-4.7-7.5L22,34.8l-4-11L0,30.5L16.4,8.7l5.4,15L23,7L23.8,7.1z M16.8,20.4l-1.5-4.3
             l-5.1,6.7L16.8,20.4z M34.4,25.4l-8.1-13.1L25,29.6L34.4,25.4z M35.2,13.2l8.1,13.1L70,9.9L35.2,13.2z" />
             </svg>
-            <small>submit</small>
+            <small>Register</small>
             </button>
         </p>
     </form>
