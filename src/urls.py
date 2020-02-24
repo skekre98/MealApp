@@ -3,5 +3,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'', views.ingest, name='ingest'),
+    url(r'^$', views.home, name='home'),
+    url(r'^login/$', views.login, name='login'),
+    url(r'^ingest-login/$', views.ingest_login, name='ingest_login'),
 ]

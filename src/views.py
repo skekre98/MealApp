@@ -1,5 +1,6 @@
 import requests
 from django.shortcuts import render
+from django.http import HttpResponse
 
 url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/quickAnswer"
 
@@ -9,12 +10,15 @@ headers = {
 }
 
 
-# Function to render Django forms
-def ingest(request):
-    if request.method == 'POST':
-        if request.POST.get('register-name'):
-            # TODO
-            # connect to sqlite
-            # insert user info
-            print('hi')
+# Function to render home
+def home(request):
+    return render(request, 'home.html')
+
+# Function to render login page
+def login(request):
     return render(request, 'login.html')
+
+def ingest_login(request):
+    # TODO
+    return HttpResponse('Login ingested')
+
