@@ -13,11 +13,8 @@ headers = {
 def ingest(request):
     if request.method == 'POST':
         if request.POST.get('register-name'):
-            print('form found')
-    # querystring = {"q":"How much vitamin c is in 2 apples%3F"}
-    # response = requests.request("GET", url, headers=headers, params=querystring)
-    # print(response.text)
+            # TODO
+            # connect to sqlite
+            # insert user info
+            print('hi')
     return render(request, 'register.html')
-
-def create_profile(request):
-    print('hi!')
