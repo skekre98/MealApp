@@ -30,9 +30,11 @@
 
     <div style="background-image: url('{% static 'images/kitchen.jpg' %}')">
 
-    <form id="contact-form">
+    <form action="."  method="POST" id="register-form">
+        {% csrf_token %}
+        <label name="register-form"></label>
         <p>
-            <input type="text" name="your-name" id="your-name" minlength="3" placeholder="Name" required>
+            <input type="text" name="name" id="name" minlength="3" placeholder="Name" required>
         </p>
         <p>
             <input type="email" name="email" id="email" placeholder="Email" required>
