@@ -7,6 +7,6 @@ class Users(models.Model):
     weight= models.IntegerField() # pounds
     height= models.IntegerField() # inches
     gender= models.CharField(max_length=1) # M or F
-    goal= models.DecimalField(max_digits=3) # -0.5 represents losing 1/2 pound per week
+    goal= models.DecimalField(max_digits=3, decimal_places=2) # -0.5 represents losing 1/2 pound per week
     lifestyle= models.IntegerField() # some number 1 through 5
     vegetarian= models.BooleanField()
