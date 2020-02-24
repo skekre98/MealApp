@@ -5,6 +5,17 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel='stylesheet' type='text/css'>
     <link href="{% static 'css/main.css' %}" rel='stylesheet' type='text/css'>
     <link href="{% static 'css/bar.css' %}" rel='stylesheet' type='text/css'>
+    <style>
+        div 
+        {
+            background-image: url('{% static 'images/WelcomePagePic.jpg' %}') no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
 </head>
 <body>
     {% block content %}
@@ -16,6 +27,8 @@
           <i class="fa fa-bars"></i>
         </a>
     </div>
+
+    <div style="background-image: url('{% static 'images/WelcomePagePic.jpg' %}')">
 
     <form id="contact-form">
         <p>
