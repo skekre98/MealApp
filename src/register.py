@@ -43,7 +43,9 @@ def ingest_register(request):
             else:
                 cal_burned = 655 + (4.35 * register.weight) + (4.7 * register.height) - (4.7 * register.age)
             cal_burned *= register.lifestyle
-            register.calories_intake = int(cal_burned + (500*register.goal))
+            cal_burned += (500*register.goal)
+            register.calories_intake = int(cal_burned)
+
             register.save()
             
             return render(request, 'register.html')  
