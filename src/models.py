@@ -8,6 +8,6 @@ class Users(models.Model):
     height= models.IntegerField(default= -1) # inches
     gender= models.IntegerField(default= -1) # 0:M or 1:F
     goal= models.DecimalField(max_digits=2, decimal_places=1, default= -1.0) # -0.5 represents losing 1/2 pound per week
-    lifestyle= models.IntegerField(default= -1) # some number 1 through 4
+    lifestyle= models.DecimalField(max_digits=2, decimal_places=1, default= -1.0) # 1.2, 1.375, 1.55, 1.725, or 1.9
     vegetarian= models.BooleanField(default= True)
 
