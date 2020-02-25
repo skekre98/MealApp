@@ -1,6 +1,7 @@
 import requests
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Users
 
 url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/quickAnswer"
 
@@ -29,9 +30,9 @@ def register(request):
 def ingest_register(request):
     # TODO
     if request.method == 'POST':
-        req_list = [request.register.get('name'), request.register.get('email'), request.register.get('password'), request.register.get('weight'), request.register.get('height'), request.register.get('gender'), request.register.get('goal'), request.register.get('lifestyle'), request.register.get('vegetarian')]
+        req_list = [request.POST.get('name'), request.POST.get('email'), request.POST.get('password'), request.POST.get('weight'), request.POST.get('height'), request.POST.get('gender'), request.POST.get('goal'), request.POST.get('lifestyle'), request.POST.get('vegetarian')]
         if all(r is not None for r in req_list):
-            register=Post()
+            register=Users()
             register.name= req_list[0]
             register.email= req_list[1]
             register.password= req_list[2]
