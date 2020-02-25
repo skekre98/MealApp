@@ -2,6 +2,7 @@ import requests
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Users
+from .login import ingest
 
 url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/quickAnswer"
 
@@ -21,6 +22,7 @@ def login(request):
 
 def ingest_login(request):
     # TODO
+    res = login.ingest(request)
     return HttpResponse('Login ingested')
 
 # Function to render login page
