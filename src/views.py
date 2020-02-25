@@ -22,3 +22,6 @@ def ingest_login(request):
     # TODO
     return HttpResponse('Login ingested')
 
+def ingest_register(request):
+    # TODO
+    

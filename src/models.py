@@ -10,3 +10,4 @@ class Users(models.Model):
     goal= models.DecimalField(max_digits=2, decimal_places=1, default= -1.0) # -0.5 represents losing 1/2 pound per week
     lifestyle= models.IntegerField(default= -1) # some number 1 through 5
     vegetarian= models.BooleanField(default= True)
+

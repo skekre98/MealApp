@@ -20,7 +20,7 @@
         </a>
     </div>
 
-    <form action="."  method="POST" id="register-form">
+    <form action="ingest-reg"  method="POST" id="register-form">
         {% csrf_token %}
         <p>
             <input type="text" name="register-name" id="name" minlength="3" placeholder="Name" required>
