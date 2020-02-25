@@ -38,6 +38,56 @@
             <input type="password" name="repassword" id="repassword" placeholder="Retype Password" required>
         </p>
 
+        <p>
+            <input type="text" name="weight" id="weight" placeholder="Weight(lbs.)" required>
+        </p>
+
+        <p>
+            <input type="text" name="height" id="height" placeholder="feet" required>
+            <input type="text" name="height" id="height" placeholder="inches" required>
+        </p>
+
+        <p>
+            <input type="text" name="gender" list="gender" placeholder="Gender">
+            <datalist id="gender">
+                <option value="Male">
+                <option value="Female">
+            </datalist>
+        </p>
+
+        <p>
+            <input type="text" name="goal" list="goal" placeholder="per week">
+            <datalist id="goal">
+                <option value="+2.0lbs"></option>
+                <option value="+1.5lbs"></option>
+                <option value="+1.0lbs"></option>
+                <option value="+0.5lbs"></option>
+                <option value="-0.5lbs"></option>
+                <option value="-1.0lbs"></option>
+                <option value="-1.5lbs"></option>
+                <option value="-2.0lbs"></option>
+            </datalist>
+        </p>
+
+        <p>
+            <input type="text" name="lifestyle" list="lifestyle" placeholder="Physical Activity">
+            <datalist id="lifestyle">
+                <option value="Sedentary"></option>
+                <option value="Lightly Active"></option>
+                <option value="Moderately Active"></option>
+                <option value="Very Active"></option>
+                <option value="Extremely Active"></option>
+            </datalist>
+        </p>
+
+        <p>
+            <input type="text" name="vegetarian" list="vegetarian" placeholder="Vegetarian">
+            <datalist id="vegetarian">
+                <option value="Yes"></option>
+                <option value="No"></option>
+            </datalist>
+        </p>
+
 
         <p>
             <button type="submit">
