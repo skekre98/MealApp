@@ -22,6 +22,10 @@ def ingest_login(request):
     # TODO
     return HttpResponse('Login ingested')
 
+# Function to render login page
+def register(request):
+    return render(request, 'register.html')
+
 def ingest_register(request):
     # TODO
-    
+    return HttpResponse('Register ingested')
