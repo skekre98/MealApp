@@ -28,6 +28,7 @@ def register(request):
 
 def ingest_register(request):
     # TODO
+    print(request.POST)
     if request.method == 'POST':
         req_list = [request.register.get('name'), request.register.get('email'), request.register.get('password'), request.register.get('weight'), request.register.get('height'), request.register.get('gender'), request.register.get('goal'), request.register.get('lifestyle'), request.register.get('vegetarian')]
         if all(r is not None for r in req_list):
