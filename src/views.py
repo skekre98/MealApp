@@ -23,7 +23,7 @@ def login(request):
 def ingest_login(request):
     # TODO
     res = user_login(request)
-    return HttpResponse('Login ingested')
+    return HttpResponse(res)
 
 # Function to render login page
 def register(request):
@@ -31,6 +31,7 @@ def register(request):
 
 def ingest_register(request):
     # TODO
+    print(request.POST)
     if request.method == 'POST':
         req_list = [request.POST.get('name'), request.POST.get('email'), request.POST.get('password'), request.POST.get('weight'), request.POST.get('feet'), request.POST.get('inches'), request.POST.get('gender'), request.POST.get('goal'), request.POST.get('lifestyle'), request.POST.get('vegetarian'), request.POST.get('age')]
         if all(r is not None for r in req_list):
@@ -68,8 +69,8 @@ def ingest_register(request):
                 cal_burned = 66 + (6.23 * register.weight) + (12.7 * register.height) - (6.8 * register.age)
             else:
                 cal_burned = 655 + (4.35 * register.weight) + (4.7 * register.height) - (4.7 * register.age)
-            register.calories_intake = int(cal_burned + (500*register.goal))
-            print(register)
+            register.calorie_intake = int(cal_burned + (500*register.goal))
+
             register.save()
             
             return render(request, 'register.html')  
