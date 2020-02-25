@@ -20,11 +20,6 @@ def home(request):
 def login(request):
     return render(request, 'login.html')
 
-def ingest_login(request):
-    # TODO
-    res = user_login(request)
-    return HttpResponse(res)
-
 # Function to render login page
 def register(request):
     return render(request, 'register.html')
