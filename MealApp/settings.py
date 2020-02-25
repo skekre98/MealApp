@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'MealApp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'duxsrgre',
+        'USER': 'duxsrgre',
+        'PASSWORD': '8LPvFmFi7cWBo86y64z0VS62zXBSRhLh',
+        'HOST': 'raja.db.elephantsql.com',
+        'PORT': '5432'
     }
 }
 
