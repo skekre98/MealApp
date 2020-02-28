@@ -77,12 +77,12 @@ WSGI_APPLICATION = 'MealApp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'duxsrgre',
-        'USER': 'duxsrgre',
-        'PASSWORD': '8LPvFmFi7cWBo86y64z0VS62zXBSRhLh',
-        'HOST': 'raja.db.elephantsql.com',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mysql_meal',
+        'USER': 'mysql_meal',
+        'PASSWORD': 'MealApp123',
+        'HOST': '85.10.205.173',
+        'PORT': '3306'
     }
 }
 
