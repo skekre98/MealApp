@@ -18,6 +18,10 @@ label {
   cursor: pointer;
 }
 
+error {
+  fill: rgb(241, 11, 11);
+}
+
 textarea,
 input {
   border: none;
