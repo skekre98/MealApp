@@ -11,9 +11,9 @@ def user_login(request):
     try:
         user = Users.objects.get(email=input_email)
     except Exception:
-        return HttpResponse("Invalid email")
+        return render(request, 'invalid_login.html', {"errors":["- invalid email"]}) 
 
     if input_password != user.password:
-        return HttpResponse("Incorrect password")
+        return render(request, 'invalid_login.html', {"errors":["- incorrect password"]}) 
     else:
         return HttpResponse("Login ingested")
