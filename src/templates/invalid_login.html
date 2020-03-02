@@ -1,21 +1,46 @@
 {% load static %}
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Meal App</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel='stylesheet' type='text/css'>
-    <link href="{% static 'css/main.css' %}" rel='stylesheet' type='text/css'>
-    <link href="{% static 'css/bar.css' %}" rel='stylesheet' type='text/css'>
-    <style>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700&subset=latin,cyrillic-ext" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/photostack/photostack.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/fullpage-menu/fullpage-menu.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/cubeportfolio/cubeportfolio.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/superslides/superslides.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'css/ploy.css' %}" rel="stylesheet">
+  <link href="{% static 'css/main.css' %}" rel='stylesheet' type='text/css'>
+  <link href="{% static 'css/bar.css' %}" rel='stylesheet' type='text/css'> 
+  <style>
         h4 {
           color: red;
           font-family: Courier, monospace;
           font-size: 50%;
         }
-    </style>
-
+        small {
+            color: rgb(0, 0, 0);
+            display: block;
+            opacity: 0;
+        }
+  </style>
 </head>
+
 <body>
-    {% block content %}
 
     <div class="topnav" id="myTopnav">
         <a href="/home/">Home</a>
@@ -53,10 +78,20 @@
         </p>
     </form>
 
-    {% endblock %}
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/modernizr/modernizr.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'lib/php-mail-form/validate.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/cubeportfolio/cubeportfolio.js' %}"></script>
+  <script src="{% static 'lib/classie/classie.js' %}"></script>
+  <script src="{% static 'lib/fullpage-menu/fullpage-menu.js' %}"></script>
+  <script src="{% static 'lib/photostack/photostack.js' %}"></script>
+  <script src="{% static 'lib/superslides/superslides.js' %}"></script>
 
-    <script src="{% static 'js/jquery3.4.1.min.js' %}" ></script>
-    <script src="{% static 'js/format.js' %}" ></script>
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'js/ploy.js' %}"></script>
+
 </body>
 </html>
-

@@ -23,3 +23,7 @@ def login(request):
 # Function to render login page
 def register(request):
     return render(request, 'register.html')
+
+# Function to render about us page
+def about(request):
+    return render(request, 'about.html')

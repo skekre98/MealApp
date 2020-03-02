@@ -4,7 +4,6 @@ from django.http import HttpResponse
 from .models import Users
 
 def user_login(request):
-    # TODO
     input_email = request.POST.get('email')
     input_password = request.POST.get('password')
 
@@ -16,4 +15,6 @@ def user_login(request):
     if input_password != user.password:
         return render(request, 'invalid_login.html', {"errors":["- incorrect password"]}) 
     else:
+        # TODO
+        # build client portal
         return HttpResponse("Login ingested")
