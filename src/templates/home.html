@@ -47,27 +47,57 @@
         </a>
     </div>
 
-    <form action="."  method="POST" id="register-form">
-        {% csrf_token %}
-        <p>
-            <input type="email" name="email" id="email" placeholder="Email" required>
-        </p>
+    <section id="slides">
+      <ul class="slides-container">
+        <li>
+          <img src="{% static 'img/food1.jpg' %}" alt="" height="21%" width="21%">
+        </li>
+        <li>
+          <img src="{% static 'img/food2.jpg' %}" alt="">
+        </li>
+        <li>
+          <img src="{% static 'img/food3.jpg' %}" alt="">
+        </li>
+      </ul>
+      <div id="bannertext">
+        <h3>The Options Are</h3>
+        <h1>ENDLESS</h1>
+      </div>
+    </section>
+    
+    <div class="container mt2">
+      <div class="row presentation">
+        <div class="col-lg-4 col-md-4">
+          <h3>We Offer</h3>
+        </div>
+  
+        <div class="col-lg-4 col-md-4">
+          <i class="icon ion-ios7-pricetag-outline large-icon"></i>
+          <h3>112</h3>
+          <p>TOTAL EMPLOYEES</p>
+          <p>Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since, when an unknown ristique senectus et netus.</p>
+        </div>
+  
+        <div class="col-lg-4 col-md-4">
+          <h3>1400+</h3>
+          <p>CLIENTS</p>
+          <p>Mellentesque habitant morbi tristique senectus et netus et malesuada famesac turpis egestas. Ut non enim eleifend felis pretium feugiat. Vivamus quis mi. Dummy text of the printing and typesetting.</p>
+        </div>
+  
+        <div class="col-lg-4 col-md-4">
+        </div>
+  
+        <div class="col-lg-4 col-md-4">
+          <h3>$ 2.000.000</h3>
+          <p>REVENUE</p>
+          <p>Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since, when an unknown ristique senectus et netus.</p>
+      </div>
+    </div>
+  </div>
 
-        <p>
-            <input type="password" name="password" id="password" placeholder="Password" required>
-        </p>
+    
 
-
-        <p>
-            <button type="submit">
-            <svg version="1.1" class="send-icn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="36px" viewBox="0 0 100 36" enable-background="new 0 0 100 36" xml:space="preserve">
-                <path d="M100,0L100,0 M23.8,7.1L100,0L40.9,36l-4.7-7.5L22,34.8l-4-11L0,30.5L16.4,8.7l5.4,15L23,7L23.8,7.1z M16.8,20.4l-1.5-4.3
-            l-5.1,6.7L16.8,20.4z M34.4,25.4l-8.1-13.1L25,29.6L34.4,25.4z M35.2,13.2l8.1,13.1L70,9.9L35.2,13.2z" />
-            </svg>
-            <small>Login</small>
-            </button>
-        </p>
-    </form>
+    
 
   <!-- JavaScript Libraries -->
   <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
