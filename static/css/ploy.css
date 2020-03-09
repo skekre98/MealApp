@@ -137,6 +137,11 @@ a img {
 	color: #c9c9c9;
 }
 
+.section-footer h2 {
+	color: white;
+	font-weight: 500;
+}
+
 .section-footer h3 {
 	color: white;
 	font-weight: 300;
