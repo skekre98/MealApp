@@ -60,10 +60,10 @@ def ingest_register(request):
         else:
             register.gender= 1
 
-        register.goal= float(req_list[7][:4])
+        register.goal= round(float(req_list[7][:4]),4)
     
         lifestyle_dict = {'Sedentary': 1.2, 'Lightly Active': 1.375, 'Moderately Active': 1.55, 'Very Active': 1.725, 'Extremely Active': 1.9}
-        register.lifestyle = lifestyle_dict[req_list[8]]
+        register.lifestyle = round(lifestyle_dict[req_list[8]],4)
 
         veg_res = req_list[9]
         if veg_res == 'Yes':
@@ -85,6 +85,5 @@ def ingest_register(request):
         register.save()
         
         return render(request, 'register.html')  
-
     else:
-            return render(request, 'register.html')
+        return render(request, 'register.html')
