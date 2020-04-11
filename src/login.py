@@ -17,4 +17,4 @@ def user_login(request):
     else:
         # TODO
         # build client portal
-        return HttpResponse("Login ingested")
+        return render(request, 'private/profile.html') 
