@@ -84,6 +84,6 @@ def ingest_register(request):
 
         register.save()
         
-        return render(request, 'private/profile.html')  
+        return render(request, 'private/taste_test.html')  
     else:
         return render(request, 'register.html')

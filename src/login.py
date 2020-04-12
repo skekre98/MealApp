@@ -17,4 +17,4 @@ def user_login(request):
     else:
         # TODO
         # build client portal
-        return render(request, 'private/profile.html') 
+        return render(request, 'private/taste_test.html') 
