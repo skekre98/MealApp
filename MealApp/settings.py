@@ -11,10 +11,15 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from configparser import RawConfigParser
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIRNAME = os.path.abspath(os.path.dirname(__file__))
+
+config = RawConfigParser()
+config.read(os.path.join(BASE_DIR, 'MealApp/settings.ini'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -22,6 +27,9 @@ DIRNAME = os.path.abspath(os.path.dirname(__file__))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'z$_j^*hhd$2zru5*9jh52lxw5)u1@fnw1f*2$&69zb_c$3#)p!'
+
+# Spoonacular API KEY 
+SPOON_KEY = config.get('spoon', 'api_key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
